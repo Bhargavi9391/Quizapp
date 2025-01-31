@@ -1,70 +1,61 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+# Quiz Game
 
-### `npm start`
+## Project Overview
+This is a simple quiz game built using React. The app fetches quiz questions and options from an API and allows users to answer them. After completing the quiz, the user’s score is displayed.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+- Dynamic loading of quiz questions and options.
+- Score tracking throughout the quiz.
+- Ability to restart the quiz after completion.
+- Simple UI to display questions and options.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup Instructions
 
-### `npm test`
+### 1. Clone the Repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone the repository to your local machine:
 
-### `npm run build`
+```bash
+git clone https://github.com/Bhargavi9391/Quizapp.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. Install Dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Navigate to the project directory and install the necessary dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+cd Quizapp
+npm install
+```
 
-### `npm run eject`
+### 3. Run the Development Server
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Start the development server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Source Code
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+You can view the source code on GitHub here:  
+[Quizapp GitHub Repository](https://github.com/Bhargavi9391/Quizapp)
 
-## Learn More
+### Screenshots
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The screenshots folder is available inside the `Quizapp` directory. You can view the images by navigating to the `screenshots` folder.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Video Link
 
-### Code Splitting
+Here is a video walkthrough of the app:  
+[Watch the Video](https://drive.google.com/file/d/1K2BNELg7s2DbzjIV-iwZoY9Z-43FsuqP/view?usp=drivesdk)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Key Points:
+1. The **Screenshots** section is clear and provides the instruction to locate the `screenshots` folder inside the project directory.
+2. The **Video Link** section is also clear with the direct link to the video on Google Drive.
+3. The source code link is clearly mentioned.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This README format looks great for sharing your project. You can now use it for submission or sharing with others. Let me know if you need anything else!
