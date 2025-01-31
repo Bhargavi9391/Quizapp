@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { HashRouter as Router } from 'react-router-dom';
 import "./App.css";
-
-
 
 const App = () => {
   const [questions, setQuestions] = useState([]);
@@ -35,59 +34,61 @@ const App = () => {
   }, []);
 
   const handleAnswer = (isCorrect, index) => {
-    setSelectedOption(index); 
+    setSelectedOption(index);
     if (isCorrect) setScore(score + 1);
     setTimeout(() => {
       const nextQuestion = currentQuestion + 1;
       if (nextQuestion < questions.length) {
         setCurrentQuestion(nextQuestion);
-        setSelectedOption(null); 
+        setSelectedOption(null);
       } else {
         setQuizCompleted(true);
       }
-    }, 1000); 
+    }, 1000);
   };
 
   if (loading) return <h2 className="loading">Loading Quiz...</h2>;
   if (error) return <h2>Error: {error}</h2>;
 
   return (
-    <div className="quiz-container">
-      <h1>Quiz Game</h1>
-      {quizCompleted ? (
-        <div>
-          <h2>Quiz Completed!</h2> 
-          <p>Your Score: {score} / {questions.length}</p>
-          <button className="restart-btn" onClick={() => window.location.reload()}>
-            Restart Quiz
-          </button>
-        </div>
-      ) : (
-        questions.length > 0 ? (
+    <Router> {/* Wrapping everything inside HashRouter */}
+      <div className="quiz-container">
+        <h1>Quiz Game</h1>
+        {quizCompleted ? (
           <div>
-            <h3>{questions[currentQuestion]?.description}</h3>
-            {questions[currentQuestion]?.options?.map((option, index) => (
-              <button
-                key={index}
-                onClick={() => handleAnswer(option.is_correct, index)}
-                className={`option-btn ${
-                  selectedOption === index
-                    ? option.is_correct
-                      ? "correct"
-                      : "incorrect"
-                    : ""
-                }`}
-              >
-                {option.description}
-              </button>
-            ))}
-            <p>Score: {score}</p>
+            <h2>Quiz Completed!</h2>
+            <p>Your Score: {score} / {questions.length}</p>
+            <button className="restart-btn" onClick={() => window.location.reload()}>
+              Restart Quiz
+            </button>
           </div>
         ) : (
-          <h2>No questions available.</h2>
-        )
-      )}
-    </div>
+          questions.length > 0 ? (
+            <div>
+              <h3>{questions[currentQuestion]?.description}</h3>
+              {questions[currentQuestion]?.options?.map((option, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleAnswer(option.is_correct, index)}
+                  className={`option-btn ${
+                    selectedOption === index
+                      ? option.is_correct
+                        ? "correct"
+                        : "incorrect"
+                      : ""
+                  }`}
+                >
+                  {option.description}
+                </button>
+              ))}
+              <p>Score: {score}</p>
+            </div>
+          ) : (
+            <h2>No questions available.</h2>
+          )
+        )}
+      </div>
+    </Router>
   );
 };
 
